@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Astralis - Login</title>
+
+        <style>
+
+            body{
+                margin:0;
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background:
+                linear-gradient(
+                rgba(0,0,0,0.5),
+                rgba(0,0,0,0.7)
+                ),
+                url("imagens/login.gif");
+                background-size:cover;
+                background-position:center;
+                background-repeat:no-repeat;
+                font-family:Arial, sans-serif;
+                color:white;
+            }
+
+            .card{
+                width:400px;
+                background:rgba(255,255,255,0.08);
+                padding:30px;
+                border-radius:20px;
+                backdrop-filter: blur(10px);
+            }
+
+            h1{
+                text-align:center;
+            }
+
+            input{
+                width:94%;
+                padding:12px;
+                margin-top:10px;
+                margin-bottom:15px;
+                border:none;
+                border-radius:10px;
+            }
+
+            button{
+                width:50%;
+                padding:10px;
+                border:none;
+                border-radius:10px;
+                cursor:pointer;
+                font-size:16px;
+                display:block;
+                margin:30px auto;
+            }
+
+            .gif-login{
+            width:180px;
+            display:block;
+            margin:auto;
+            margin-bottom:20px;
+            border-radius:15px;
+            box-shadow:
+            0 0 20px rgba(255,255,255,0.3);
+            }
+
+        </style>
+    </head>
+        <body>
+            <div class="card">
+                <h1>🌌 Astralis</h1>
+                <input type="text" id="nome" placeholder="Seu nome">
+                <input type="email" id="email" placeholder="Seu e-mail">
+                <input type="password" id="senha" placeholder="Sua senha">
+                <button onclick="entrar()">
+                    Entrar
+                </button>
+            </div>
+            <script>
+                function entrar(){
+                const nome = document.getElementById("nome").value;
+                const email = document.getElementById("email").value;
+                localStorage.setItem("usuario", nome);
+                localStorage.setItem("email", email);
+                window.location.href = "questionario.html";
+                }
+            </script>
+        </body>
+</html>

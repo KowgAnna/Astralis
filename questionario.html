@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>Astralis - Questionário</title>
+
+            <style>
+
+                body{
+                    margin:0;
+                    padding:30px;
+                    background:
+                    linear-gradient(
+                        rgba(0,0,0,0.5),
+                        rgba(0,0,0,0.7)
+                    ),
+                    url("imagens/login.gif");
+                    background-size:cover;
+                    background-position:center;
+                    background-repeat:no-repeat;
+                    background-attachment:fixed;
+                    color:white;
+                    font-family:Arial,sans-serif;
+                    min-height:100vh;
+
+                }
+
+                .container{
+                    max-width:900px;
+                    margin:auto;
+                    background:rgba(255,255,255,0.05);
+                    padding:30px;
+                    border-radius:20px;
+                }
+
+                h1,h2{
+                    text-align:center;
+                }
+
+                .pergunta{
+                    margin-top:30px;
+                }
+
+                select{
+                    width:100%;
+                    padding:12px;
+                    margin-top:10px;
+                    border-radius:10px;
+                    border:none;
+                    font-size:16px;
+                }
+
+                button{
+                    width:70%;
+                    padding:15px;
+                    margin-top:30px;
+                    border:none;
+                    border-radius:12px;
+                    font-size:18px;
+                    cursor:pointer;
+                    background:#4f46e5;
+                    color:white;
+                    display:block;
+                    margin:30px auto;
+                }
+
+                button:hover{
+                    background:#4338ca;
+                }
+
+                #resultado{
+                    margin-top:30px;
+                }
+
+                .resultado-card{
+                    background:rgba(255,255,255,0.08);
+                    backdrop-filter:blur(12px);
+                    border:1px solid rgba(255,255,255,0.15);
+                    padding:30px;
+                    border-radius:25px;
+                    box-shadow:
+                    0 0 30px rgba(79,70,229,0.3);
+                }
+
+            </style>
+        </head>
+    <body>
+        <div class="container">
+                <h1>🌌 Astralis</h1>
+                <h2 id="boasvindas"></h2>
+            <div class="pergunta">
+                <label>1. Quando enfrenta uma grande dificuldade, qual costuma ser sua reação mais natural?</label>
+                <select id="q1">
+                    <option value="">...</option>
+                    <option value="persistencia">Continuo tentando até encontrar uma solução</option>
+                    <option value="criatividade">Busco novas formas de enxergar o problema</option>
+                    <option value="amizade">Procuro apoio em pessoas de confiança</option>
+                    <option value="coragem">Enfrento o desafio diretamente</option>
+                    <option value="sabedoria">Reflito antes de agir</option>
+                </select>
+            </div>
+
+            <div class="pergunta">
+                <label>2. O que mais motiva suas escolhas?</label>
+                <select id="q2">
+                    <option value="">...</option>
+                    <option value="inspiracao">Deixar um impacto positivo</option>
+                    <option value="lideranca">Conduzir mudanças</option>
+                    <option value="empatia">Ajudar pessoas</option>
+                    <option value="independencia">Seguir meu próprio caminho</option>
+                    <option value="criatividade">Criar algo novo</option>
+                </select>
+            </div>
+
+            <div class="pergunta">
+                <label>3. Qual qualidade você mais admira em alguém?</label>
+                <select id="q3">
+                    <option value="">...</option>
+                    <option value="confianca">Segurança em si mesmo</option>
+                    <option value="amizade">Lealdade</option>
+                    <option value="sabedoria">Inteligência e maturidade</option>
+                    <option value="coragem">Determinação</option>
+                    <option value="empatia">Compreensão</option>
+                </select>
+            </div>
+
+            <div class="pergunta">
+                <label>4. Como você gostaria de ser lembrado?</label>
+                <select id="q4">
+                    <option value="">...</option>
+                    <option value="lideranca">Por liderar transformações</option>
+                    <option value="inspiracao">Por inspirar pessoas</option>
+                    <option value="amizade">Por construir conexões verdadeiras</option>
+                    <option value="criatividade">Por ideias inovadoras</option>
+                    <option value="persistencia">Por nunca desistir</option>
+                </select>
+            </div>
+
+            <div class="pergunta">
+                <label>5. O que traz mais satisfação para você?</label>
+                <select id="q5">
+                    <option value="">...</option>
+                    <option value="criatividade">Criar algo único</option>
+                    <option value="lideranca">Guiar uma equipe</option>
+                    <option value="empatia">Fazer diferença na vida de alguém</option>
+                    <option value="persistencia">Concluir um objetivo difícil</option>
+                    <option value="independencia">Conquistar minha autonomia</option>
+                </select>
+        </div>
+
+        <div class="pergunta">
+            <label>6. Quando precisa tomar uma decisão importante:</label>
+            <select id="q6">
+                <option value="">...</option>
+                <option value="sabedoria">Analiso cuidadosamente</option>
+                <option value="coragem">Ajo mesmo sem garantias</option>
+                <option value="amizade">Escuto quem confio</option>
+                <option value="independencia">Decido sozinho</option>
+                <option value="criatividade">Sigo minha intuição</option>
+            </select>
+        </div>
+
+        <div class="pergunta">
+            <label>7. Qual dessas frases representa melhor você?</label>
+            <select id="q7">
+                <option value="">...</option>
+                <option value="persistencia">Grandes conquistas exigem constância</option>
+                <option value="coragem">O medo não deve impedir sonhos</option>
+                <option value="amizade">Ninguém cresce sozinho</option>
+                <option value="criatividade">Sempre existe uma nova possibilidade</option>
+                <option value="lideranca">Toda mudança começa com alguém</option>
+            </select>
+        </div>
+
+        <div class="pergunta">
+            <label>8. O que costuma ocupar seus pensamentos quando está sozinho?</label>
+            <select id="q8">
+                <option value="">...</option>
+                <option value="inspiracao">Meu propósito</option>
+                <option value="criatividade">Novas ideias</option>
+                <option value="amizade">As pessoas importantes para mim</option>
+                <option value="independencia">Meus próximos passos</option>
+                <option value="sabedoria">Reflexões sobre a vida</option>
+            </select>
+        </div>
+
+        <div class="pergunta">
+            <label>9. Se sua personalidade fosse uma estrela, ela brilharia principalmente por:</label>
+            <select id="q9">
+                <option value="">...</option>
+                <option value="lideranca">Guiar outras pessoas</option>
+                <option value="criatividade">Sua originalidade</option>
+                <option value="empatia">A luz que compartilha</option>
+                <option value="coragem">Sua força</option>
+                <option value="confianca">Sua presença marcante</option>
+        </select>
+        </div>
+
+        <div class="pergunta">
+            <label>10. Qual legado você gostaria de deixar?</label>
+            <select id="q10">
+                <option value="">...</option>
+                <option value="inspiracao">Inspiração</option>
+                <option value="amizade">União</option>
+                <option value="criatividade">Inovação</option>
+                <option value="lideranca">Transformação</option>
+                <option value="sabedoria">Conhecimento</option>
+            </select>
+        </div>
+
+        <button onclick="descobrir()">
+            ⭐ Descobrir Minha Estrela
+        </button>
+
+        <button onclick="verResultados()">
+            📊 Ver Resultados Salvos
+        </button>
+
+        <div id="resultado"></div>
+        </div>
+        <script>
+        const nome = localStorage.getItem("usuario") || "Visitante";
+        const email = localStorage.getItem("email") || "";
+
+        document.getElementById("boasvindas").innerHTML =
+        `Bem-vindo(a), ${nome}!`;
+
+        function gerarPotenciais(caracteristicas){
+            const lista = caracteristicas.toLowerCase();
+            const potenciais = [];
+            const desafios = [];
+
+        if(lista.includes("lideranca")){
+            potenciais.push("✔ Liderar equipes");
+            desafios.push("⚠ Delegar responsabilidades");
+        }
+
+        if(lista.includes("criatividade")){
+            potenciais.push("✔ Resolver problemas de forma inovadora");
+            desafios.push("⚠ Manter foco em uma única direção");
+        }
+
+        if(lista.includes("confianca")){
+            potenciais.push("✔ Transmitir segurança");
+            desafios.push("⚠ Evitar excesso de autoconfiança");
+        }
+
+        if(lista.includes("sabedoria")){
+            potenciais.push("✔ Tomar decisões equilibradas");
+            desafios.push("⚠ Evitar pensar demais antes de agir");
+        }
+
+        if(lista.includes("coragem")){
+            potenciais.push("✔ Enfrentar desafios");
+            desafios.push("⚠ Evitar agir impulsivamente");
+        }
+
+        if(lista.includes("persistencia")){
+            potenciais.push("✔ Não desistir facilmente");
+            desafios.push("⚠ Saber a hora de mudar de estratégia");
+        }
+
+        if(lista.includes("amizade")){
+            potenciais.push("✔ Construir relacionamentos fortes");
+            desafios.push("⚠ Evitar depender demais da aprovação dos outros");
+        }
+
+        return {
+        potenciais,
+        desafios
+        };
+        }
+
+        async function descobrir(){
+            const perfil = [];
+            for(let i=1;i<=10;i++){
+                const valor = document.getElementById(`q${i}`).value;
+                if(valor){
+                    perfil.push(valor);
+                }
+            }
+
+        const resposta = await fetch(
+            "http://localhost:3001/resultado",
+            {
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify({perfil})
+            }
+        );
+
+        const dados = await resposta.json();
+        const analise =
+        gerarPotenciais(
+            dados.estrela.caracteristicas
+        );
+
+        let imagemConstelacao = "";
+
+        switch(dados.estrela.constelacao){
+            case "Orion":
+            imagemConstelacao = "imagens/orion.jpg";
+            break;
+            case "Carina":
+            imagemConstelacao = "imagens/carina.jpg";
+            break;
+            case "Centaurus":
+            imagemConstelacao = "imagens/centaurus.jpg";
+            break;
+            case "Crux":
+            imagemConstelacao = "imagens/crux.jpg";
+            break;
+            case "Scorpius":
+            imagemConstelacao = "imagens/scorpius.jpg";
+            break;
+            case "Leo":
+            imagemConstelacao = "imagens/leo.jpg";
+            break;
+            case "Virgo":
+            imagemConstelacao = "imagens/virgo.jpg";
+            break;
+            case "Lyra":
+            imagemConstelacao = "imagens/lyra.jpg";
+            break;
+            case "Gemini":
+            imagemConstelacao = "imagens/gemini.jpg";
+            break;
+            case "Ursa Minor":
+            imagemConstelacao = "imagens/ursaminor.jpg";
+            break;
+            case "Pleiades (Taurus)":
+            imagemConstelacao = "imagens/pleiades.jpg";
+            break;
+            case "Aquila":
+            imagemConstelacao = "imagens/aquila.jpg";
+            break;
+            case "Cygnus":
+            imagemConstelacao = "imagens/cygnus.jpg";
+            break;
+            case "Piscis Austrinus":
+            imagemConstelacao = "imagens/piscisaustrinus.jpg";
+            break;
+            case "Auriga":
+            imagemConstelacao = "imagens/auriga.jpg";
+            break;
+            case "Perseus":
+            imagemConstelacao = "imagens/perseus.jpg";
+            break;
+            case "Aries":
+            imagemConstelacao = "imagens/aries.jpg";
+            break;
+            case "Ophiuchus":
+            imagemConstelacao = "imagens/ophiuchus.jpg";
+            break;
+            case "Sagittarius":
+            imagemConstelacao = "imagens/sagittarius.jpg";
+            break;
+            case "Eridanus":
+            imagemConstelacao = "imagens/eridanus.jpg";
+            break;
+            case "Bootes":
+            imagemConstelacao = "imagens/bootes.jpg";
+            break;
+            default:
+            imagemConstelacao = "imagens/taurus.jpg";
+        }
+
+            document.getElementById("resultado").innerHTML = `
+            <div class="resultado-card">
+
+            <h2>⭐ ${nome}, sua estrela é ${dados.estrela.nome}</h2>
+
+            <h3>🌌 Constelação: ${dados.estrela.constelacao}</h3>
+
+            <img
+                src="${imagemConstelacao}"
+                style="
+                width:100%;
+                height:auto;
+                border-radius:15px;
+                margin-bottom:20px;
+                display:block;
+            ">
+
+            <p>
+            <strong>📖 Sobre a estrela:</strong><br>
+            ${dados.estrela.descricao_real}
+            </p>
+
+            <p>
+            <strong>✨ Características:</strong><br>
+            ${dados.estrela.caracteristicas}
+            </p>
+
+            <p>
+            <strong>🌠 Significado Astralis:</strong><br>
+            ${dados.estrela.justificativa}
+            </p>
+
+            <hr>
+
+            <h3>💫 Compatibilidade</h3>
+
+            <p>
+            <strong>${dados.compatibilidade}%</strong>
+            de compatibilidade com esta estrela.
+            </p>
+
+            <hr>
+
+            <h3>🏆 Top 3 Estrelas Compatíveis</h3>
+
+            <ol>
+            <li>
+            ${dados.top3[0].nome}
+            (${dados.top3[0].pontos} pontos)
+            </li>
+
+            <li>
+            ${dados.top3[1].nome}
+            (${dados.top3[1].pontos} pontos)
+            </li>
+
+            <li>
+            ${dados.top3[2].nome}
+            (${dados.top3[2].pontos} pontos)
+            </li>
+            </ol>
+
+            <hr>
+
+            <h3>💪 Potenciais</h3>
+
+            <ul>
+            ${analise.potenciais
+            .map(item => `<li>${item}</li>`)
+            .join("")}
+            </ul>
+
+            <h3>⚠️ Desafios</h3>
+
+            <ul>
+            ${analise.desafios
+            .map(item => `<li>${item}</li>`)
+            .join("")}
+            </ul>
+
+            <hr>
+
+            <div id="interpretacaoIA">
+            ⏳ Gerando interpretação personalizada...
+            </div>
+
+            </div>
+            `;
+
+        const respostaIA = await fetch(
+        "http://localhost:3001/interpretacao",
+        {
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify({
+            estrela: dados.estrela,
+            perfil: perfil
+        })
+    }
+);
+        const dadosIA =
+        await respostaIA.json();
+        console.log(dadosIA);
+
+        await fetch(
+        "http://localhost:3001/salvarResultado",
+        {
+            method:"POST",
+            headers:{  
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                nome,
+                email,
+                estrela:dados.estrela.nome,
+                perfil,
+                interpretacao:dadosIA.interpretacao
+            })
+        }
+        );
+
+       const interpretacaoFormatada = dadosIA.interpretacao.replace(/\n/g,"<br>");
+        document.getElementById("interpretacaoIA").innerHTML = `
+        <h3>🤖 Interpretação Gerada por IA</h3>
+        ${interpretacaoFormatada}
+        `;
+        }
+
+        function verResultados(){
+            window.open(
+                "http://localhost:3001/resultados",
+                "_blank"
+            );
+        }
+
+        </script>
+    </body>
+</html>
